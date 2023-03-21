@@ -1,5 +1,6 @@
-import './App.css'
+import "./App.css";
 import Expenses from "./components/Expenses";
+import ProductTest from "./components/ProductTest";
 
 function App() {
   const expenses = [
@@ -23,10 +24,34 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
+  const products = {
+    productOne: {
+      product: 'Conditioner',
+      description: `Best product on the market`,
+      price: 500,
+    },
+    productTwo: {
+      product: 'Speaker',
+      description: `Best product on the market`,
+      price: 200,
+    },
+    productThree: {
+      product: 'Ironing Board',
+      description: `Best product on the market`,
+      price: 500,
+    },  
+  }
   return (
-    <div>
-      <h2 className="header" >Let's get started!</h2>
-      <Expenses items={expenses} />
+    <div className="App"> 
+      <main>
+        {/* <h2 className="header">Let's get started!</h2> */}
+        <Expenses items={expenses} />
+      </main>  
+      <footer className="testDiv">
+        <ProductTest product={products} />
+        <ProductTest product={products} />
+        <ProductTest product={products} />
+      </footer>
     </div>
   );
 }
