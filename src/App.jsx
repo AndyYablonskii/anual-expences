@@ -1,7 +1,6 @@
 import "./App.css";
-import Expenses from "./components/Expenses";
-import Counter from "./components/Counter";
-
+import Expenses from "./components/Expenses/Expenses";
+import Counter from "./components/Misc/Counter";
 
 function App() {
   const expenses = [
@@ -24,15 +23,15 @@ function App() {
       amount: 450,
       date: new Date(2021, 5, 12),
     },
-  ];
+ ];
 
   return (
     <div className="App">
       <main>
         <h2 className="header">Let's get started!</h2>
-        <Counter/>
+        <Counter />
         <Expenses items={expenses} />
-      </main>
+      </main>1
     </div>
   );
 }
